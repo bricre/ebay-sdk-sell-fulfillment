@@ -14,8 +14,8 @@ class ShippingStep extends AbstractModel
     /**
      * The unique identifier of the shipping carrier being used to ship the line item.
      * <br /><br /><span class="tablenote"><strong>Note:</strong> The Trading API's <a
-     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html"
-     * target="_blank">GeteBayDetails</a> call can be used to retrieve the latest
+     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html
+     * " target="_blank">GeteBayDetails</a> call can be used to retrieve the latest
      * shipping carrier and shipping service option enumeration values.</span>.
      *
      * @var string
@@ -26,12 +26,12 @@ class ShippingStep extends AbstractModel
      * The unique identifier of the shipping service option being used to ship the line
      * item.<br /><br /><span class="tablenote"><strong>Note:</strong> Use the Trading
      * API's <a
-     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html"
-     * target="_blank">GeteBayDetails</a> call to retrieve the latest shipping carrier
-     * and shipping service option enumeration values. When making the <a
-     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html"
-     * target="_blank">GeteBayDetails</a> call, include the <strong>DetailName</strong>
-     * field in the request payload and set its value to
+     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html
+     * " target="_blank">GeteBayDetails</a> call to retrieve the latest shipping
+     * carrier and shipping service option enumeration values. When making the <a
+     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html
+     * " target="_blank">GeteBayDetails</a> call, include the
+     * <strong>DetailName</strong> field in the request payload and set its value to
      * <code>ShippingServiceDetails</code>. Each valid shipping service option
      * (returned in <strong>ShippingServiceDetails.ShippingService</strong> field) and
      * corresponding shipping carrier (returned in
@@ -44,13 +44,16 @@ class ShippingStep extends AbstractModel
 
     /**
      * This container consists of shipping and contact information about the individual
-     * or organization to whom the fulfillment package will be shipped. <br /><br />
-     * <span class="tablenote"><strong>Note:</strong> For a Global Shipping Program
-     * shipment, this is the address of the international shipping provider's domestic
-     * warehouse. The international shipping provider is responsible for delivery to
-     * the final destination address. For more information, see <a
-     * href="https://developer.ebay.com/devzone/guides/features-guide/default.html#Development/Shipping-APIWork.html#AddressingaGlobalShippingProgramShipment"
-     * target="_blank">Addressing a Global Shipping Program Shipment</a>.</span>.
+     * or organization to whom the fulfillment package will be shipped.<br/><span
+     * class="tablenote"><strong>Note:</strong> When <b>FulfillmentInstructionsType</b>
+     * is <code>FULFILLED_BY_EBAY</code>, there will be no <b>shipTo</b> address
+     * displayed.</span><br/><span class="tablenote"><strong>Note:</strong> For a
+     * Global Shipping Program shipment, this is the address of the international
+     * shipping provider's domestic warehouse. The international shipping provider is
+     * responsible for delivery to the final destination address. For more information,
+     * see <a
+     * href="https://developer.ebay.com/devzone/guides/features-guide/default.html#Development/Shipping-APIWork.html#AddressingaGlobalShippingProgramShipment
+     * " target="_blank">Addressing a Global Shipping Program Shipment</a>.</span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\ExtendedContact
      */

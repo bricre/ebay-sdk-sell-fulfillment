@@ -28,8 +28,8 @@ class Dispute extends AbstractAPI
      * @param string $payment_dispute_id This is the unique identifier of the payment
      *                                   dispute. This path parameter must be passed in at the end of the call URI to
      *                                   identify the payment dispute to retrieve. This identifier is automatically
-     *                                   created by eBay once the payment dispute comes into the eBay managed payments
-     *                                   system. The unique identifier for payment disputes is returned in the
+     *                                   created by eBay once the payment dispute comes into the eBay system. The unique
+     *                                   identifier for payment disputes is returned in the
      *                                   <strong>paymentDisputeId</strong> field in the
      *                                   <strong>getPaymentDisputeSummaries</strong> response.
      *
@@ -105,8 +105,8 @@ class Dispute extends AbstractAPI
      *                                   dispute. This path parameter must be passed in at the end of the call URI to
      *                                   identify the payment dispute for which the user wishes to see all activity. This
      *                                   identifier is automatically created by eBay once the payment dispute comes into
-     *                                   the eBay managed payments system. The unique identifier for payment disputes is
-     *                                   returned in the <strong>paymentDisputeId</strong> field in the
+     *                                   the eBay system. The unique identifier for payment disputes is returned in the
+     *                                   <strong>paymentDisputeId</strong> field in the
      *                                   <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
      *                                   is required, and the actual identifier value is passed in right after the
      *                                   <strong>payment_dispute</strong> resource. See the Resource URI above.
@@ -243,8 +243,8 @@ class Dispute extends AbstractAPI
      *                                                         dispute. This path parameter must be passed into the call URI to identify the
      *                                                         payment dispute for which the user plans to contest. This identifier is
      *                                                         automatically created by eBay once the payment dispute comes into the eBay
-     *                                                         managed payments system. The unique identifier for payment disputes is returned
-     *                                                         in the <strong>paymentDisputeId</strong> field in the
+     *                                                         system. The unique identifier for payment disputes is returned in the
+     *                                                         <strong>paymentDisputeId</strong> field in the
      *                                                         <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
      *                                                         is required, and the actual identifier value is passed in right after the
      *                                                         <strong>payment_dispute</strong> resource. See the Resource URI above.
@@ -278,8 +278,8 @@ class Dispute extends AbstractAPI
      *                                                        dispute. This path parameter must be passed into the call URI to identify the
      *                                                        payment dispute for which the user plans to accept. This identifier is
      *                                                        automatically created by eBay once the payment dispute comes into the eBay
-     *                                                        managed payments system. The unique identifier for payment disputes is returned
-     *                                                        in the <strong>paymentDisputeId</strong> field in the
+     *                                                        system. The unique identifier for payment disputes is returned in the
+     *                                                        <strong>paymentDisputeId</strong> field in the
      *                                                        <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
      *                                                        is required, and the actual identifier value is passed in right after the
      *                                                        <strong>payment_dispute</strong> resource. See the Resource URI above.
@@ -303,22 +303,26 @@ class Dispute extends AbstractAPI
      * This method is used to upload an evidence file for a contested payment dispute.
      * The unique identifier of the payment dispute is passed in as a path parameter,
      * and unique identifiers for payment disputes can be retrieved with the
-     * <strong>getPaymentDisputeSummaries</strong> method.<br><br>The
-     * <strong>uploadEvidenceFile</strong> only uploads an encrypted, binary image file
-     * (using multipart/form-data HTTP request header), and does not have a request
-     * payload. The three image formats supported at this time are .JPEG, .JPG, and
-     * .PNG.<br><br>Once the file is successfully uploaded, the seller will need to
-     * grab the <strong>fileId</strong> value in the response payload to add this file
-     * to a new evidence set using the <strong>addEvidence</strong> method, or to add
-     * this file to an existing evidence set using the <strong>updateEvidence</strong>
-     * method.
+     * <strong>getPaymentDisputeSummaries</strong> method.<br><br><span
+     * class="tablenote"><strong>Note:</strong> The <strong>uploadEvidenceFile</strong>
+     * only uploads an encrypted, binary image file (using
+     * <strong>multipart/form-data</strong> HTTP request header), and does not have a
+     * JSON-based request payload.<br><br>Use 'file' as the name of the key that you
+     * use to upload the image file. The upload will not be successful if a different
+     * key name is used.<br><br>The three image formats supported at this time are
+     * <strong>.JPEG</strong>, <strong>.JPG</strong>, and
+     * <strong>.PNG</strong>.</span><br><br>Once the file is successfully uploaded, the
+     * seller will need to grab the <strong>fileId</strong> value in the response
+     * payload to add this file to a new evidence set using the
+     * <strong>addEvidence</strong> method, or to add this file to an existing evidence
+     * set using the <strong>updateEvidence</strong> method.
      *
      * @param string $payment_dispute_id This is the unique identifier of the payment
      *                                   dispute. This path parameter must be passed into the call URI to identify the
      *                                   payment dispute for which the user plans to upload an evidence file. This
      *                                   identifier is automatically created by eBay once the payment dispute comes into
-     *                                   the eBay managed payments system. The unique identifier for payment disputes is
-     *                                   returned in the <strong>paymentDisputeId</strong> field in the
+     *                                   the eBay system. The unique identifier for payment disputes is returned in the
+     *                                   <strong>paymentDisputeId</strong> field in the
      *                                   <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
      *                                   is required, and the actual identifier value is passed in right after the
      *                                   <strong>payment_dispute</strong> resource. See the Resource URI above.
@@ -373,11 +377,11 @@ class Dispute extends AbstractAPI
      *                                                             dispute. This path parameter must be passed into the call URI to identify the
      *                                                             payment dispute for which the user plans to add evidence for a contested payment
      *                                                             dispute. This identifier is automatically created by eBay once the payment
-     *                                                             dispute comes into the eBay managed payments system. The unique identifier for
-     *                                                             payment disputes is returned in the <strong>paymentDisputeId</strong> field in
-     *                                                             the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path
-     *                                                             parameter is required, and the actual identifier value is passed in right after
-     *                                                             the <strong>payment_dispute</strong> resource. See the Resource URI above.
+     *                                                             dispute comes into the eBay system. The unique identifier for payment disputes
+     *                                                             is returned in the <strong>paymentDisputeId</strong> field in the
+     *                                                             <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
+     *                                                             is required, and the actual identifier value is passed in right after the
+     *                                                             <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param AddEvidencePaymentDisputeRequest $Model
      *
      * @return AddEvidencePaymentDisputeResponse
@@ -430,12 +434,11 @@ class Dispute extends AbstractAPI
      *                                                                dispute. This path parameter must be passed into the call URI to identify the
      *                                                                payment dispute for which the user plans to update the evidence set for a
      *                                                                contested payment dispute. This identifier is automatically created by eBay once
-     *                                                                the payment dispute comes into the eBay managed payments system. The unique
-     *                                                                identifier for payment disputes is returned in the
-     *                                                                <strong>paymentDisputeId</strong> field in the
-     *                                                                <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path parameter
-     *                                                                is required, and the actual identifier value is passed in right after the
-     *                                                                <strong>payment_dispute</strong> resource. See the Resource URI above.
+     *                                                                the payment dispute comes into the eBay system. The unique identifier for
+     *                                                                payment disputes is returned in the <strong>paymentDisputeId</strong> field in
+     *                                                                the <strong>getPaymentDisputeSummaries</strong> response.<br><br>This path
+     *                                                                parameter is required, and the actual identifier value is passed in right after
+     *                                                                the <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param UpdateEvidencePaymentDisputeRequest $Model
      *
      * @return mixed

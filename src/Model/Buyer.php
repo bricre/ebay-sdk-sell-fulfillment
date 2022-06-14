@@ -11,7 +11,9 @@ class Buyer extends AbstractModel
 {
     /**
      * This container consists of address information that can be used by sellers for
-     * tax purpose.
+     * tax purpose.<br/><br/><span class="tablenote"><strong>Note:</strong> When using
+     * the eBay vault program, if an item is shipped to a vault, the tax address will
+     * be the vault address.</span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\TaxAddress
      */

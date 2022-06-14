@@ -40,10 +40,10 @@ class LineItemFulfillmentInstructions extends AbstractModel
      * wants to return item) if the order arrives after the expected delivery time.
      * <br/><br/> For more information on the details and requirements of eBay
      * Guaranteed Delivery, see the <a
-     * href="https://www.ebay.com/help/selling/shipping-items/offering-ebay-guaranteed-delivery?id=4645"
-     * target="_blank">Offering eBay Guaranteed Delivery</a> help topic.<br/><br/> This
-     * field will always be returned regardless of whether the listing site offers eBay
-     * Guaranteed Delivery or if the seller is opted in to the feature.
+     * href="https://www.ebay.com/help/selling/shipping-items/offering-ebay-guaranteed-delivery?id=4645
+     * " target="_blank">Offering eBay Guaranteed Delivery</a> help topic.<br/><br/>
+     * This field will always be returned regardless of whether the listing site offers
+     * eBay Guaranteed Delivery or if the seller is opted in to the feature.
      *
      * @var bool
      */

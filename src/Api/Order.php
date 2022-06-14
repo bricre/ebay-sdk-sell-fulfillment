@@ -188,21 +188,18 @@ class Order extends AbstractAPI
     }
 
     /**
-     * This method allows a seller (opted in to eBay Managed Payments) to issue a full
-     * or partial refund to a buyer for an order. Full or partial refunds can be issued
-     * at the order level or line item level.<br/><br/>The refunds issued through this
-     * method are processed asynchronously, so the refund will not show as 'Refunded'
-     * right away. A seller will have to make a subsequent <a
+     * This method allows a seller to issue a full or partial refund to a buyer for an
+     * order. Full or partial refunds can be issued at the order level or line item
+     * level.<br/><br/>The refunds issued through this method are processed
+     * asynchronously, so the refund will not show as 'Refunded' right away. A seller
+     * will have to make a subsequent <a
      * href="https://developer.ebay.com/api-docs/sell/fulfillment/resources/order/methods/getOrder"
      * target="_blank">getOrder</a> call to check the status of the refund.  The status
      * of an order refund can be found in the <a
      * href="https://developer.ebay.com/api-docs/sell/fulfillment/resources/order/methods/getOrder#response.paymentSummary.refunds.refundStatus"
      * target="_blank">paymentSummary.refunds.refundStatus</a> field of the <a
      * href="https://developer.ebay.com/api-docs/sell/fulfillment/resources/order/methods/getOrder"
-     * target="_blank">getOrder</a> response. <br/><br/><span
-     * class="tablenote"><strong>Note:</strong> eBay Managed Payments is currently only
-     * available to a limited number of US sellers, but this program is scheduled to
-     * become available to more sellers throughout 2019 and beyond. </span>.
+     * target="_blank">getOrder</a> response.
      *
      * @param string             $order_id The unique identifier of the order. Order IDs are
      *                                     returned in the <b>getOrders</b> method (and <b>GetOrders</b> call of Trading

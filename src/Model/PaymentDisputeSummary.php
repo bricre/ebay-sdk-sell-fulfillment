@@ -67,7 +67,7 @@ class PaymentDisputeSummary extends AbstractModel
     /**
      * This is the unique identifier of the payment dispute. This identifier is
      * automatically created by eBay once the payment dispute comes into the eBay
-     * Managed Payments system. This identifier is passed in at the end of the
+     * system. This identifier is passed in at the end of the
      * <strong>getPaymentDispute</strong> call URI to retrieve a specific payment
      * dispute. The <strong>getPaymentDispute</strong> method returns more details
      * about a payment dispute than the <strong>getPaymentDisputeSummaries</strong>

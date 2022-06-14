@@ -22,6 +22,15 @@ class Program extends AbstractModel
     public $authenticityVerification = null;
 
     /**
+     * This field provides information about the eBay vault program that has been
+     * selected for an order. This is returned only for those items that are eligible
+     * for the eBay Vault Program.
+     *
+     * @var \Ebay\Sell\Fulfillment\Model\EbayVaultProgram
+     */
+    public $ebayVault = null;
+
+    /**
      * This field provides details about an order line item being handled by eBay
      * fulfillment. It is only returned for paid orders being fulfilled by eBay or an
      * eBay fulfillment partner.

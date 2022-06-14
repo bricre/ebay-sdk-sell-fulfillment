@@ -10,8 +10,8 @@ use OpenAPI\Runtime\AbstractModel;
 class ItemLocation extends AbstractModel
 {
     /**
-     * The two-letter <a href="https://www.iso.org/iso-3166-country-codes.html"
-     * title="https://www.iso.org" target="_blank">ISO 3166</a> code representing the
+     * The two-letter <a href="https://www.iso.org/iso-3166-country-codes.html "
+     * title="https://www.iso.org " target="_blank">ISO 3166</a> code representing the
      * country of the address. For implementation help, refer to <a
      * href='https://developer.ebay.com/api-docs/sell/fulfillment/types/ba:CountryCodeEnum'>eBay
      * API documentation</a>.

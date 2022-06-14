@@ -37,12 +37,12 @@ class ShippingFulfillmentDetails extends AbstractModel
      * <strong>trackingNumber</strong> fields are optional, but generally these fields
      * will be provided if the shipping carrier and tracking number are known. <br
      * /><br /><span class="tablenote"><strong>Note:</strong> Use the Trading API's <a
-     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html"
-     * target="_blank">GeteBayDetails</a> call to retrieve the latest shipping carrier
-     * enumeration values. When making the <a
-     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html"
-     * target="_blank">GeteBayDetails</a> call, include the <strong>DetailName</strong>
-     * field in the request payload and set its value to
+     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html
+     * " target="_blank">GeteBayDetails</a> call to retrieve the latest shipping
+     * carrier enumeration values. When making the <a
+     * href="https://developer.ebay.com/devzone/XML/docs/Reference/eBay/GeteBayDetails.html
+     * " target="_blank">GeteBayDetails</a> call, include the
+     * <strong>DetailName</strong> field in the request payload and set its value to
      * <code>ShippingCarrierDetails</code>. Each valid shipping carrier enumeration
      * value is returned in a <strong>ShippingCarrierDetails.ShippingCarrier</strong>
      * field in the response payload.</span>.

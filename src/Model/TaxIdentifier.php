@@ -44,7 +44,7 @@ class TaxIdentifier extends AbstractModel
      * This two-letter code indicates the country that issued the buyer's tax ID. The
      * country that the two-letter code represents can be found in the
      * <strong>CountryCodeEnum</strong> type, or in the  <a
-     * href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> standard.
+     * href="https://www.iso.org/iso-3166-country-codes.html ">ISO 3166</a> standard.
      * For implementation help, refer to <a
      * href='https://developer.ebay.com/api-docs/sell/fulfillment/types/ba:CountryCodeEnum'>eBay
      * API documentation</a>.

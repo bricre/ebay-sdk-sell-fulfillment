@@ -124,8 +124,7 @@ class PaymentDispute extends AbstractModel
     /**
      * This is the unique identifier of the payment dispute. This is the same
      * identifier that is passed in to the call URI. This identifier is automatically
-     * created by eBay once the payment dispute comes into the eBay Managed Payments
-     * system.
+     * created by eBay once the payment dispute comes into the eBay system.
      *
      * @var string
      */

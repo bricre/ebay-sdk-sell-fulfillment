@@ -51,8 +51,8 @@ class ShippingFulfillment extends AbstractModel
      * class="tablenote"><strong>Note:</strong> The Trading API's
      * <b>ShippingCarrierCodeType</b> enumeration type contains the most current list
      * of eBay shipping carrier codes and the countries served by each carrier. See <a
-     * href="https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/types/ShippingCarrierCodeType.html"
-     * target="_blank">ShippingCarrierCodeType</a>.</span>.
+     * href="https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/types/ShippingCarrierCodeType.html
+     * " target="_blank">ShippingCarrierCodeType</a>.</span>.
      *
      * @var string
      */

@@ -18,8 +18,8 @@ class FulfillmentStartInstruction extends AbstractModel
      * This field is only returned if its value is <code>true</code> and indicates that
      * the fulfillment will be shipped via eBay's Global Shipping Program. <br /><br
      * />For more information, see the <a
-     * href="https://www.ebay.com/help/selling/shipping-items/setting-shipping-options/global-shipping-program?id=4646"
-     * target="_blank">Global Shipping Program</a> help topic.
+     * href="https://www.ebay.com/help/selling/shipping-items/setting-shipping-options/global-shipping-program?id=4646
+     * " target="_blank">Global Shipping Program</a> help topic.
      *
      * @var bool
      */
@@ -33,10 +33,10 @@ class FulfillmentStartInstruction extends AbstractModel
      * package to their international shipping provider's domestic warehouse. The
      * international shipping provider is responsible for delivery to the final
      * destination address.<br /><br />For more information, see <a
-     * href="https://developer.ebay.com/devzone/guides/features-guide/default.html#Development/Shipping-APIWork.html#AddressingaGlobalShippingProgramShipment"
-     * target="_blank">Addressing a Global Shipping Program Shipment</a>.<p> <span
+     * href="https://developer.ebay.com/devzone/guides/features-guide/default.html#Development/Shipping-APIWork.html#AddressingaGlobalShippingProgramShipment
+     * " target="_blank">Addressing a Global Shipping Program Shipment</a>.<p> <span
      * class="tablenote"><strong>Note:</strong> For Authenticity Guarantee program
-     * shipment, this is the address of the authenticator’s warehouse. The
+     * shipment, this is the address of the authenticator's warehouse. The
      * authenticator is responsible for delivery to the buyer shipping
      * address.</span></p>.
      *
