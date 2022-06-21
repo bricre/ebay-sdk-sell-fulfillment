@@ -93,9 +93,11 @@ class PricingSummary extends AbstractModel
      * and the <strong>lineItems.taxes</strong> containers in the response. If both of
      * these containers appear for one or more line items in the response with the
      * following <strong>taxType</strong> values, the 'Collect and Remit' tax amount
-     * that the buyer paid is in this amount:<ul><li><code>STATE_SALES_TAX</code>: US
-     * state-mandated sales tax</li><li><code>GST</code>: 'Good and Services' tax in
-     * Australia or New Zealand</li><li><code>VAT</code>: VAT collected for UK or EU
+     * that the buyer paid is included in this
+     * amount:<ul><li><code>STATE_SALES_TAX</code>: US state-mandated sales
+     * tax</li><li><code>PROVINCE_SALES_TAX</code>: Provincial Sales Tax in
+     * Canada</li><li><code>GST</code>: 'Good and Services' tax in Canada, Australia,
+     * and New Zealand</li><li><code>VAT</code>: VAT collected for UK and EU
      * countries</li></ul></span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\Amount

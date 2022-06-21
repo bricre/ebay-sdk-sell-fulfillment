@@ -11,6 +11,7 @@ use Ebay\Sell\Fulfillment\Model\FileEvidence;
 use Ebay\Sell\Fulfillment\Model\PaymentDispute;
 use Ebay\Sell\Fulfillment\Model\PaymentDisputeActivityHistory;
 use Ebay\Sell\Fulfillment\Model\UpdateEvidencePaymentDisputeRequest;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Dispute extends AbstractAPI
 {
@@ -33,9 +34,9 @@ class Dispute extends AbstractAPI
      *                                   <strong>paymentDisputeId</strong> field in the
      *                                   <strong>getPaymentDisputeSummaries</strong> response.
      *
-     * @return PaymentDispute
+     * @return PaymentDispute|UnexpectedResponse
      */
-    public function get(string $payment_dispute_id): PaymentDispute
+    public function get(string $payment_dispute_id)
     {
         return $this->request(
         'getPaymentDispute',
@@ -81,9 +82,9 @@ class Dispute extends AbstractAPI
      *                                   response. <br><br>Below is an example of the syntax to use for this query
      *                                   parameter:<br/><br/><code>file_id=12345678</code>
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function fetchEvidenceContent(string $payment_dispute_id, array $queries = []): mixed
+    public function fetchEvidenceContent(string $payment_dispute_id, array $queries = []): UnexpectedResponse
     {
         return $this->request(
         'fetchEvidenceContent',
@@ -111,9 +112,9 @@ class Dispute extends AbstractAPI
      *                                   is required, and the actual identifier value is passed in right after the
      *                                   <strong>payment_dispute</strong> resource. See the Resource URI above.
      *
-     * @return PaymentDisputeActivityHistory
+     * @return PaymentDisputeActivityHistory|UnexpectedResponse
      */
-    public function getActivities(string $payment_dispute_id): PaymentDisputeActivityHistory
+    public function getActivities(string $payment_dispute_id)
     {
         return $this->request(
         'getActivities',
@@ -203,9 +204,9 @@ class Dispute extends AbstractAPI
      *                       result set that matches the input criteria.<br><br><b>Min</b>: 0; <b>Max</b>:
      *                       total number of payment disputes - 1; <b>Default</b>: 0
      *
-     * @return DisputeSummaryResponse
+     * @return DisputeSummaryResponse|UnexpectedResponse
      */
-    public function getSummaries(array $queries = []): DisputeSummaryResponse
+    public function getSummaries(array $queries = [])
     {
         return $this->request(
         'getPaymentDisputeSummaries',
@@ -250,9 +251,9 @@ class Dispute extends AbstractAPI
      *                                                         <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param ContestPaymentDisputeRequest $Model
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function contest(string $payment_dispute_id, ContestPaymentDisputeRequest $Model): mixed
+    public function contest(string $payment_dispute_id, ContestPaymentDisputeRequest $Model): UnexpectedResponse
     {
         return $this->request(
         'contestPaymentDispute',
@@ -285,9 +286,9 @@ class Dispute extends AbstractAPI
      *                                                        <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param AcceptPaymentDisputeRequest $Model
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function accept(string $payment_dispute_id, AcceptPaymentDisputeRequest $Model): mixed
+    public function accept(string $payment_dispute_id, AcceptPaymentDisputeRequest $Model): UnexpectedResponse
     {
         return $this->request(
         'acceptPaymentDispute',
@@ -327,9 +328,9 @@ class Dispute extends AbstractAPI
      *                                   is required, and the actual identifier value is passed in right after the
      *                                   <strong>payment_dispute</strong> resource. See the Resource URI above.
      *
-     * @return FileEvidence
+     * @return FileEvidence|UnexpectedResponse
      */
-    public function uploadEvidenceFile(string $payment_dispute_id): FileEvidence
+    public function uploadEvidenceFile(string $payment_dispute_id)
     {
         return $this->request(
         'uploadEvidenceFile',
@@ -384,9 +385,9 @@ class Dispute extends AbstractAPI
      *                                                             <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param AddEvidencePaymentDisputeRequest $Model
      *
-     * @return AddEvidencePaymentDisputeResponse
+     * @return AddEvidencePaymentDisputeResponse|UnexpectedResponse
      */
-    public function addEvidence(string $payment_dispute_id, AddEvidencePaymentDisputeRequest $Model): AddEvidencePaymentDisputeResponse
+    public function addEvidence(string $payment_dispute_id, AddEvidencePaymentDisputeRequest $Model)
     {
         return $this->request(
         'addEvidence',
@@ -441,9 +442,9 @@ class Dispute extends AbstractAPI
      *                                                                the <strong>payment_dispute</strong> resource. See the Resource URI above.
      * @param UpdateEvidencePaymentDisputeRequest $Model
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function updateEvidence(string $payment_dispute_id, UpdateEvidencePaymentDisputeRequest $Model): mixed
+    public function updateEvidence(string $payment_dispute_id, UpdateEvidencePaymentDisputeRequest $Model): UnexpectedResponse
     {
         return $this->request(
         'updateEvidence',

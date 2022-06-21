@@ -6,6 +6,7 @@ use Ebay\Sell\Fulfillment\Model\IssueRefundRequest;
 use Ebay\Sell\Fulfillment\Model\Order as OrderModel;
 use Ebay\Sell\Fulfillment\Model\OrderSearchPagedCollection;
 use Ebay\Sell\Fulfillment\Model\Refund;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Order extends AbstractAPI
 {
@@ -42,9 +43,9 @@ class Order extends AbstractAPI
      *                        presently supported value is <code>TAX_BREAKDOWN</code>. This type returns a
      *                        breakdown of tax and fee values associated with the order.
      *
-     * @return OrderModel
+     * @return OrderModel|UnexpectedResponse
      */
-    public function get(string $orderId, array $queries = []): OrderModel
+    public function get(string $orderId, array $queries = [])
     {
         return $this->request(
         'getOrder',
@@ -173,9 +174,9 @@ class Order extends AbstractAPI
      *                       also be known and used/referenced by the buyer and eBay customer support.
      *                       </span>
      *
-     * @return OrderSearchPagedCollection
+     * @return OrderSearchPagedCollection|UnexpectedResponse
      */
-    public function gets(array $queries = []): OrderSearchPagedCollection
+    public function gets(array $queries = [])
     {
         return $this->request(
         'getOrders',
@@ -227,9 +228,9 @@ class Order extends AbstractAPI
      *                                     format.</span>
      * @param IssueRefundRequest $Model
      *
-     * @return Refund
+     * @return Refund|UnexpectedResponse
      */
-    public function issueRefund(string $order_id, IssueRefundRequest $Model): Refund
+    public function issueRefund(string $order_id, IssueRefundRequest $Model)
     {
         return $this->request(
         'issueRefund',

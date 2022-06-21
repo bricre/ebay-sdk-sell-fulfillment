@@ -18,10 +18,12 @@ class EbayTaxReference extends AbstractModel
      * This field value is returned to indicate the VAT tax type, which will vary by
      * country/region. This string value will be one of the
      * following:<ul><li><code>ABN</code>: if this string is returned, the ID in the
-     * <strong>value</strong> field is an Australia tax ID</li><li><code>IOSS</code>:
-     * if this string is returned, the ID in the <strong>value</strong> field is an
-     * eBay EU or UK IOSS number</li><li><code>IRD</code>: if this string is returned,
-     * the ID in the <strong>value</strong> field is an eBay New Zealand tax
+     * <strong>value</strong> field is an Australia tax ID</li><li><code>DDG</code>: if
+     * this string is returned, it indicates that tax has been collected and remitted
+     * for Digitally Delivered Goods (DDG)</li><li><code>IOSS</code>: if this string is
+     * returned, the ID in the <strong>value</strong> field is an eBay EU or UK IOSS
+     * number</li><li><code>IRD</code>: if this string is returned, the ID in the
+     * <strong>value</strong> field is an eBay New Zealand tax
      * ID</li><li><code>OSS</code>: if this string is returned, the ID in the
      * <strong>value</strong> field is an  eBay Germany VAT
      * ID</li><li><code>VOEC</code>: if this string is returned, the ID in the

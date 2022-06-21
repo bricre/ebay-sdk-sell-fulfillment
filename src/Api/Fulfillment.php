@@ -5,6 +5,7 @@ namespace Ebay\Sell\Fulfillment\Api;
 use Ebay\Sell\Fulfillment\Model\ShippingFulfillment;
 use Ebay\Sell\Fulfillment\Model\ShippingFulfillmentDetails;
 use Ebay\Sell\Fulfillment\Model\ShippingFulfillmentPagedCollection;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Fulfillment extends AbstractAPI
 {
@@ -29,9 +30,9 @@ class Fulfillment extends AbstractAPI
      *                        also be known and used/referenced by the buyer and eBay customer support.
      *                        </span>
      *
-     * @return ShippingFulfillmentPagedCollection
+     * @return ShippingFulfillmentPagedCollection|UnexpectedResponse
      */
-    public function gets(string $orderId): ShippingFulfillmentPagedCollection
+    public function gets(string $orderId)
     {
         return $this->request(
         'getShippingFulfillments',
@@ -73,9 +74,9 @@ class Fulfillment extends AbstractAPI
      *                                            </span>
      * @param ShippingFulfillmentDetails $Model   fulfillment payload
      *
-     * @return object
+     * @return object|UnexpectedResponse
      */
-    public function create(string $orderId, ShippingFulfillmentDetails $Model): object
+    public function create(string $orderId, ShippingFulfillmentDetails $Model)
     {
         return $this->request(
         'createShippingFulfillment',
@@ -114,9 +115,9 @@ class Fulfillment extends AbstractAPI
      *                              also be known and used/referenced by the buyer and eBay customer support.
      *                              </span>
      *
-     * @return ShippingFulfillment
+     * @return ShippingFulfillment|UnexpectedResponse
      */
-    public function get(string $fulfillmentId, string $orderId): ShippingFulfillment
+    public function get(string $fulfillmentId, string $orderId)
     {
         return $this->request(
         'getShippingFulfillment',

@@ -52,10 +52,11 @@ class Order extends AbstractModel
 
     /**
      * This field is only returned if <code>true</code>, and indicates that eBay will
-     * collect tax (US state-mandated sales tax, 'Goods and Services' tax in Australia
-     * or New Zealand, and VAT collected for UK and EU countries) for at least one line
-     * item in the order, and remit the tax to the taxing authority of the buyer's
-     * residence. If this field is returned, the seller should search for one or more
+     * collect tax (US state-mandated sales tax, Federal and Provincial Sales Tax in
+     * Canada, 'Goods and Services' tax in Canada, Australia, and New Zealand, and VAT
+     * collected for UK and EU countries,) for at least one line item in the order, and
+     * remit the tax to the taxing authority of the buyer's residence. If this field is
+     * returned, the seller should search for one or more
      * <strong>ebayCollectAndRemitTaxes</strong> containers at the line item level to
      * get more information about the type of tax and the amount.
      *

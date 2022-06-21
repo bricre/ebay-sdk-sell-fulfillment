@@ -39,16 +39,18 @@ class PaymentSummary extends AbstractModel
      * <code>FAILED</code>), or if a partial or full refund occurs with the order.<br
      * /><br /><span class="tablenote"><strong>Note:</strong> For orders that are
      * subject to 'eBay Collect and Remit' tax, the 'Collect and Remit' tax amount for
-     * the order will be included in this <strong>totalDueSeller</strong> value.
-     * <br><br>To determine if 'Collect and Remit' taxes were added into this
+     * the order will be included in this <strong>totalDueSeller</strong>
+     * value.<br><br>To determine if 'Collect and Remit' taxes were added into this
      * <strong>totalDueSeller</strong> value, the user can check for the corresponding
      * <strong>lineItems.ebayCollectAndRemitTaxes</strong> and the
      * <strong>lineItems.taxes</strong> containers in the response. If both of these
      * containers appear for one or more line items in the response with the following
      * <strong>taxType</strong> values, the 'Collect and Remit' tax amount that the
-     * buyer paid is in this amount:<ul><li><code>STATE_SALES_TAX</code>:
-     * US</li><li><code>GST</code>: Australia or New Zealand</li><li><code>VAT</code>:
-     * UK or EU countries</li></ul></span>.
+     * buyer paid is included in this amount:<ul><li><code>STATE_SALES_TAX</code>:
+     * US</li><li><code>PROVINCE_SALES_TAX</code>: Provincial Sales Tax in
+     * Canada</li><li><code>GST</code>: Canada, Australia, and New
+     * Zealand</li><li><code>VAT</code>: VAT collected for UK and EU
+     * countries</li></ul></span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\Amount
      */

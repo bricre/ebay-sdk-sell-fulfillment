@@ -13,20 +13,22 @@ class Payment extends AbstractModel
      * The amount that seller receives for the order via the payment method mentioned
      * in <strong>Payment.paymentMethod</strong>.<br /><br /><span
      * class="tablenote"><strong>Note:</strong> For orders that are subject to 'eBay
-     * Collect and Remit' tax, which includes US state-mandated sales tax, 'Good and
-     * Services' tax in Australia and New Zealand, and VAT collected for UK or EU, the
-     * 'Collect and Remit' tax amount for the order will be included in this
-     * <strong>amount.value</strong> field (and in the
-     * <strong>amount.convertedFromValue</strong> field if currency conversion is
-     * applicable).<br><br> To determine if 'Collect and Remit' taxes were added into
-     * this <strong>totalDueSeller</strong> value, the user can check for the
-     * corresponding <strong>lineItems.ebayCollectAndRemitTaxes</strong> and the
-     * <strong>lineItems.taxes</strong> containers in the response. If both of these
-     * containers appear for one or more line items in the response with the following
-     * <strong>taxType</strong> values, the 'Collect and Remit' tax amount that the
-     * buyer paid is in this amount:<ul><li><code>STATE_SALES_TAX</code>:
-     * US</li><li><code>GST</code>: Australia or New Zealand</li><li><code>VAT</code>:
-     * UK or EU countries</li></ul></span>.
+     * Collect and Remit' tax, which includes US state-mandated sales tax, Federal and
+     * Provincial Sales Tax in Canada, 'Good and Services' tax in Canada, Australia,
+     * and New Zealand, and VAT collected for UK or EU, the 'Collect and Remit' tax
+     * amount for the order will be included in this <strong>amount.value</strong>
+     * field (and in the <strong>amount.convertedFromValue</strong> field if currency
+     * conversion is applicable).<br><br> To determine if 'Collect and Remit' taxes
+     * were added into this <strong>totalDueSeller</strong> value, the user can check
+     * for the corresponding <strong>lineItems.ebayCollectAndRemitTaxes</strong> and
+     * the <strong>lineItems.taxes</strong> containers in the response. If both of
+     * these containers appear for one or more line items in the response with the
+     * following <strong>taxType</strong> values, the 'Collect and Remit' tax amount
+     * that the buyer paid is included in this
+     * amount:<ul><li><code>STATE_SALES_TAX</code>:
+     * US</li><li><code>PROVINCE_SALES_TAX</code>: Provincial Sales Tax in
+     * Canada</li><li><code>GST</code>: Canada, Australia, and New
+     * Zealand</li><li><code>VAT</code>: UK and EU countries</li></ul></span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\Amount
      */

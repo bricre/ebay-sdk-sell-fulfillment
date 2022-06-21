@@ -7,23 +7,26 @@ use OpenAPI\Runtime\AbstractModel;
 /**
  * This type contains information about the type and amount of tax that eBay will
  * collect and remit to the state, province, country, or other taxing authority in
- * the buyer's location, as required by that taxing authority. 'Collect and Remit'
- * tax includes US state-mandated sales tax, 'Goods and Services' tax in Australia
- * or New Zealand, VAT collected for the UK and EU countries.
+ * the buyer's location, as required by that taxing authority.<br/><br/>'Collect
+ * and Remit' tax includes:<ul><li>US state-mandated sales tax</li><li>Federal and
+ * Provincial Sales Tax in Canada</li><li>'Goods and Services' tax in Canada,
+ * Australia, and New Zealand</li><li>VAT collected for the UK and EU
+ * countries</li></ul>.
  */
 class EbayCollectAndRemitTax extends AbstractModel
 {
     /**
-     * The monetary amount of the 'Collect and Remit' tax. This presently includes US
-     * state-mandated sales tax, 'Good and Services' tax in Australia and New Zealand,
-     * and VAT collected for the UK and EU countries.<br /><br /><span
-     * class="tablenote"><strong>Note:</strong> If the corresponding
-     * <strong>taxType</strong> is <code>STATE_SALES_TAX</code>, <code>GST</code>, or
-     * <code>VAT</code>, and the <strong>lineItems.taxes</strong> container also
-     * appears for this line item with the same tax amount, the order is subject to
-     * 'eBay Collect and Remit' tax. For orders that are subject to 'eBay Collect and
-     * Remit' tax, the tax amount in this field will be included in the
-     * <strong>lineItems.total</strong>,
+     * The monetary amount of the 'Collect and Remit' tax. This currently
+     * includes:<br/><ul><li>US state-mandated sales tax</li><li>Federal and Provincial
+     * Sales Tax in Canada</li><li>'Goods and Services' tax in Canada, Australia, and
+     * New Zealand</li><li>VAT collected for the UK and EU countries</li></ul><br /><br
+     * /><span class="tablenote"><strong>Note:</strong> If the corresponding
+     * <strong>taxType</strong> is <code>STATE_SALES_TAX</code>,
+     * <code>PROVINCE_SALES_TAX</code>, <code>GST</code>, or <code>VAT</code>, and the
+     * <strong>lineItems.taxes</strong> container also appears for this line item with
+     * the same tax amount, the order is subject to 'eBay Collect and Remit' tax. For
+     * orders that are subject to 'eBay Collect and Remit' tax, the tax amount in this
+     * field will be included in the <strong>lineItems.total</strong>,
      * <strong>paymentSummary.payments.amount</strong>,
      * <strong>paymentSummary.totalDueSeller</strong>, and
      * <strong>pricingSummary.total</strong> fields.</span>.

@@ -38,14 +38,15 @@ class LineItem extends AbstractModel
     /**
      * This container will be returned if the order line item is subject to a 'Collect
      * and Remit' tax that eBay will collect and remit to the proper taxing authority
-     * on the buyer's behalf. 'Collect and Remit' tax includes US state-mandated sales
-     * tax, 'Goods and Services' tax in Australia or New Zealand, and VAT collected for
-     * UK and EU countries. The amount of this tax is shown in the
-     * <strong>amount</strong> field, and the type of tax is shown in the
-     * <strong>taxType</strong> field.<br/><br/> eBay will display the tax type and
-     * amount during checkout in accordance with the buyer's address, and handle
-     * collection and remittance of the tax without requiring the seller to take any
-     * action.
+     * on the buyer's behalf.<br/><br/>'Collect and Remit' tax includes:<ul><li>US
+     * state-mandated sales tax</li><li>Federal and Provincial Sales Tax in
+     * Canada</li><li>'Goods and Services' tax in Canada, Australia, and New
+     * Zealand</li><li>VAT collected for the UK and EU countries</li></ul>The amount of
+     * this tax is shown in the <strong>amount</strong> field, and the type of tax is
+     * shown in the <strong>taxType</strong> field.<br/><br/>eBay will display the tax
+     * type and amount during checkout in accordance with the buyer's address, and
+     * handle collection and remittance of the tax without requiring the seller to take
+     * any action.
      *
      * @var \Ebay\Sell\Fulfillment\Model\EbayCollectAndRemitTax[]
      */
@@ -212,7 +213,7 @@ class LineItem extends AbstractModel
 
     /**
      * This is the total price that the buyer must pay for the line item after all
-     * costs (item cost, delivery cost, taxes) are added, minus any discounts and/or
+     * costs (item cost, delivery cost, taxes,) are added, minus any discounts and/or
      * promotions.<br /><br /><span class="tablenote"><strong>Note:</strong> For orders
      * that are subject to 'eBay Collect and Remit' tax, the 'Collect and Remit' tax
      * amount for the order will be included in this <strong>total</strong> value only
@@ -226,9 +227,10 @@ class LineItem extends AbstractModel
      * these containers appear for one or more line items in the response with the
      * following <strong>taxType</strong> values, the 'Collect and Remit' tax amount
      * that the buyer paid is in this amount:<ul><li><code>STATE_SALES_TAX</code>: US
-     * state-mandated sales tax</li><li><code>GST</code>: 'Good and Services' tax in
-     * Australia or New Zealand</li><li><code>VAT</code>: VAT collected for UK or EU
-     * countries</li></ul></span>.
+     * state-mandated sales tax</li><li><code>PROVINCE_SALES_TAX</code>: Provincial
+     * Sales Tax in Canada</li><li><code>GST</code>: 'Goods and Services' tax in
+     * Canada, Australia, and New Zealand</li><li><code>VAT</code>: VAT collected for
+     * UK and EU countries</li></ul></span>.
      *
      * @var \Ebay\Sell\Fulfillment\Model\Amount
      */

@@ -47,8 +47,10 @@ class ShippingStep extends AbstractModel
      * or organization to whom the fulfillment package will be shipped.<br/><span
      * class="tablenote"><strong>Note:</strong> When <b>FulfillmentInstructionsType</b>
      * is <code>FULFILLED_BY_EBAY</code>, there will be no <b>shipTo</b> address
-     * displayed.</span><br/><span class="tablenote"><strong>Note:</strong> For a
-     * Global Shipping Program shipment, this is the address of the international
+     * displayed.</span><br/><span class="tablenote"><strong>Note:</strong> For
+     * Digitally Delivered Goods (DDG), this address is the same as the Buyer's
+     * Registration Address.</span><br/><span class="tablenote"><strong>Note:</strong>
+     * For a Global Shipping Program shipment, this is the address of the international
      * shipping provider's domestic warehouse. The international shipping provider is
      * responsible for delivery to the final destination address. For more information,
      * see <a
